@@ -1,0 +1,22 @@
+.card {
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+}
+
+.card img {
+    width: 260px;
+    height: 260px;
+}
+
+h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+ p {
+    align-items: justify;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    color: #CCC3C3;
+ }

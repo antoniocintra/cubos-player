@@ -1,0 +1,70 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1440px;
+    height: 97.22px;
+    padding: 0 32px;
+    background: #130C0C;
+    border-bottom: 1px solid #6A6363;
+
+}
+
+.logo {
+    width: 292px;
+    height: 64px;
+
+}
+
+.profile {
+    display: flex;
+    gap: 8px;
+    width: 200px;
+    height: 40px;
+    margin-right: 40px;
+}
+
+.user,
+.user img {
+
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #6A6363;
+
+}
+
+span {
+    margin-top: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    size: 16px;
+    color: #FFF;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+
+}
+
+.text-title, .text-title h1 {
+   width: 190px;
+   height: 26px;
+    align-self: flex-start;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 40px 20px;
+}
+
+.row {
+    border-bottom: 1px solid #6A6363;
+}

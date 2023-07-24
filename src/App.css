@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #0C0505 0%, #3A3535 47.92%, #5E5858 100%);
+    color: white;
+}
+
+main {
+
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90.78px;
+    
+}
+
+.playlist-title {
+    align-self: flex-start;
+    text-align: center;
+    margin-left: 13.5%;
+  
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFF;
+  
+}
+
+.row {
+   
+    width: 1119px;
+    border: 1px solid  #6A6363;
+
+    
+}
+
+.cards {
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+    width: 1121px;
+    height: 500px;
+  
+}

@@ -1,0 +1,102 @@
+.music-names {
+    font-family: 'Roboto', sans-serif;
+    font-size:24px;
+    font-weight: 700;
+    color: #FFF;
+}
+.footer-controls {
+    display: flex;
+    justify-content: space-between;
+    height: 132px;
+    width: 100%;
+    
+    background: linear-gradient(180deg, #383535 0%, rgba(133, 130, 130, 0) 100%);
+    border-top: 2px solid rgba(0, 0, 0, 0.21);
+}
+
+.music-names span {
+    display: block;
+    font-size: 16px;
+    
+}
+.icons {
+    display: flex;
+   
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
+    width: 35%;
+
+   
+}
+
+.play {
+    
+   width: 64px;
+  align-items: center;
+  justify-content: center;
+   height: 64px;   
+  margin-top: 16px;
+  cursor: pointer;
+
+}
+
+.music-icons {
+    display: flex;
+   flex-wrap: wrap;
+   width: 328px;
+   height: 48px;
+    
+   cursor: pointer;
+   margin-top: 16px;
+   opacity: 0.8;
+   
+   
+}
+
+.music-icons img {
+    width: 48px;
+    height: 48px;
+    
+}
+
+.music-timeline {
+    width:560px;
+    margin-top:12px;
+    border: 4px solid  #CCC3C3;
+    
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+    width: 560px;
+    color: #CCC3C3;
+}
+
+.div-bar {
+    position: relative;
+    width: 100%;
+}
+
+.progress-bar {
+    border-bottom: 4px solid #CCC3C3;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.left-span{
+    margin-right: 8px;
+   
+
+}
+
+.right-span, .left-span {
+    margin-left: 8px;
+    margin-bottom: 10px;
+    color: #CCC3C3;
+    font-size: 16px;
+    font-weight: 700;
+
+}
