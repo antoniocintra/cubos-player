@@ -3,42 +3,28 @@
     flex-direction: column;
     background: linear-gradient(180deg, #0C0505 0%, #3A3535 47.92%, #5E5858 100%);
     color: white;
+    align-items: center;
+    justify-content: space-between;
 }
 
 main {
 
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 90.78px;
+  max-width: 1440px;
     
 }
 
-.playlist-title {
-    align-self: flex-start;
-    text-align: center;
-    margin-left: 13.5%;
-  
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #FFF;
-  
+main h2 {
+    color: #fff;
+    margin-top: 2%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
 }
 
-.row {
-   
-    width: 1119px;
-    border: 1px solid  #6A6363;
-
-    
-}
-
-.cards {
+.container-cards {
     display: flex;
-    margin-top: 10px;
-    gap: 20px;
-    width: 1121px;
+    gap: 34px;
+    width: 85%;
     height: 500px;
   
 }

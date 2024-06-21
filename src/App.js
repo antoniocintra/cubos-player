@@ -1,66 +1,80 @@
-import './App.css';
+import Card from './components/Card/Card';
+import Controls from './components/controls/Footer';
+import Header from './components/Header';
 import { musics } from './musics';
+import './App.css';
 import { useRef, useState } from 'react';
-import Controls from './components/controls/Footer.js';
-import Header from './components/Header.js';
-import Card from './components/Card/Card.js';
 
+function Home() {
+  const audioRef = useRef(null);
 
-
-function App() {
+  const [iconBtn, setIconBtn] = useState('pause');
 
   const [musicsData] = useState([...musics]);
-  const audioRef = useRef(null);
-  const [musicBtn, setMusicBtn] = useState('pause');
-  const [actualMusic, setActualMusic] = useState({ id: 0, title: '', artist: '' });
+  const [currentMusic, setCurrentMusic] = useState({
+    id: 0,
+    title: '',
+    artist: ''
+  });
 
+  function setMusic(music) {
+    setIconBtn('play');
 
-  function setMusic(musics) {
-    setMusicBtn('play');
-    audioRef.current.src = musics.url;
-    setActualMusic(musics);
+    audioRef.current.src = music.url;
+
+    setCurrentMusic(music);
   }
 
   function handleChangeMusic(option) {
-    if (!actualMusic.id) {
+    if (!currentMusic.id) {
       return;
     }
 
-    const nextMusicId = option === 'next'
-      ? actualMusic.id + 1
-      : actualMusic.id - 1;
+    const newMusicId = option === 'next'
+      ? currentMusic.id + 1
+      : currentMusic.id - 1;
 
-    const anotherMusic = musicsData.find((musics) => musics.id === nextMusicId);
-    if (!anotherMusic) {
+    const otherMusic = musicsData.find((music) => music.id === newMusicId);
+
+    if (!otherMusic) {
       return;
     }
 
-    setMusic(anotherMusic);
+    setMusic(otherMusic);
   }
+
 
   return (
     <div className="container">
       <Header />
       <main>
-        <h1 className='playlist-title'>The best play list</h1>
-        <div className='row'></div>
-        <div className="cards">
-          {musicsData.map((musics) => (
-            <div onClick={() => setMusic(musics)}
-              key={musics.id}>
-
-              <Card title={musics.title} cover={musics.cover} description={musics.description} />
+        <h2>The best play list</h2>
+        <div className='container-cards'>
+          {musicsData.map((music) => (
+            <div
+              onClick={() => setMusic(music)}
+              key={music.id}
+            >
+              <Card
+                title={music.title}
+                cover={music.cover}
+                description={music.description}
+              />
             </div>
-
           ))}
         </div>
-
       </main>
-      <Controls audioRef={audioRef} actualMusic={actualMusic} musicBtn={musicBtn} setMusicBtn={setMusicBtn}
-        handleChangeMusic={handleChangeMusic} />
-      <audio ref = {audioRef} />
-    </div >
+      <Controls
+        audioRef={audioRef}
+        currentMusic={currentMusic}
+        iconBtn={iconBtn}
+        setIconBtn={setIconBtn}
+        handleChangeMusic={handleChangeMusic}
+      />
+
+      <audio ref={audioRef} />
+    </div>
   );
 }
 
-export default App;
+export default Home;
