@@ -1,5 +1,5 @@
 import './style.css'
-import profile from '../assets/profile.jpg'
+import profile from '../assets/profile.jpeg'
 import logo from '../assets/logo.svg'
 
 export default function Header() {
@@ -11,7 +11,7 @@ export default function Header() {
 
             <div className='profile'>
                 <img className='user' src={profile} alt='user data' />
-                <span>Bem vindo, Daniel. </span>
+                <span>Bem vindo, Antônio. </span>
             </div>
         </div>
     )
